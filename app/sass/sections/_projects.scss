@@ -1,0 +1,76 @@
+
+
+#projects{
+
+    .projectBox{
+        color: white;
+        margin-bottom: 2rem;
+        padding: 0 0 .5rem 0;  
+        
+        a{text-decoration: none;color: white;}
+        .projectBox:last-child{
+            margin-bottom: 0;
+        }
+        .projectImg{
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 12px;
+    
+            // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/emile.png") ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 90%;
+            height: 300px;
+            box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.12);
+
+            transition: transform .3s;
+        }
+        .boxTitle{
+            text-transform: uppercase;
+            font-size: .9rem;
+            text-align: center;
+            padding-top: 1rem;
+            background-color: darkblue;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.3);
+
+            transition: background-color .3s;
+        }
+        .boxDesc{
+            color: white;
+            font-size: .9rem;
+            width: 50%;
+            margin-left: 1rem;
+            transition: color .3s;
+        }
+
+        .boxLanguages{
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 1rem;
+
+            .txtLanguages{
+                display: block;
+                width: fit-content;
+                background-color: darkblue;
+                padding: .5rem;
+                margin-right: .6rem;
+                font-size: .8rem;
+                border-radius: 3px;
+                transition: background-color .3s,transform .3s ;
+            }
+            .txtLanguages:last-child{margin-right: 0;}
+            .txtLanguages:hover{background-color: blue;transform:scale(1.1); transition: background-color .3s ,transform .3s;}
+        }
+    }
+
+    .activeImgBox{
+        transform: scale(1.05);
+        transition: transform .3s;
+    }
+}
+
