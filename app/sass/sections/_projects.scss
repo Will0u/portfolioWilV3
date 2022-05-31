@@ -21,7 +21,7 @@
             background-repeat: no-repeat;
             width: 90%;
             height: 300px;
-            box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.12);
+            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.12);
 
             transition: transform .3s;
         }
@@ -33,7 +33,7 @@
             background-color: darkblue;
             border-top-left-radius: 12px;
             border-top-right-radius: 12px;
-            box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.3);
+            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
 
             transition: background-color .3s;
         }
@@ -54,6 +54,7 @@
             margin-top: 1rem;
 
             .txtLanguages{
+                cursor:default;
                 display: block;
                 width: fit-content;
                 background-color: darkblue;

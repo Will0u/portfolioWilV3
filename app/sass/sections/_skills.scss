@@ -1,0 +1,48 @@
+#skills{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+    border-bottom: 1px solid blue;
+    border-top: 1px solid blue;
+
+    .language{
+        cursor:default;
+        text-transform: capitalize;
+        color: white;
+        display: block;
+        width: fit-content;
+        background-color: darkblue;
+        padding: .5rem;
+        margin-right: .6rem;
+        margin-left: 0.6rem;
+        margin-bottom: .6rem;
+        font-size: .8rem;
+        border-radius: 3px;
+        transition: background-color .3s,transform .3s ;
+    }
+    .language:last-child{margin-right: 0;}
+    .language:hover{background-color: blue;transform:scale(1.1); transition: background-color .3s ,transform .3s;}
+
+    .languageNon{
+        cursor:default;
+        text-transform: capitalize;
+        color: white;
+        display: block;
+        width: fit-content;
+        background-color: darkgray;
+        padding: .5rem;
+        margin-right: .6rem;
+        margin-left: 0.6rem;
+        margin-bottom: .6rem;
+        font-size: .8rem;
+        border-radius: 3px;
+        transition: background-color .3s,transform .3s ;
+    }
+    .languageNon:last-child{margin-right: 0;}
+    .languageNon:hover{background-color: gray;transform:scale(1.1); transition: background-color .3s ,transform .3s;}
+}

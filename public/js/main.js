@@ -74,3 +74,76 @@ projectArray.forEach(project => {
         });
     });
 });
+
+
+class Language {
+    constructor(nom,appris) {
+        this.nom = nom
+        this.appris = appris
+    }
+}
+
+let languagesArray = [
+    new Language("angular", true),
+    new Language("html", true),
+    new Language("css", true),
+    new Language("javascript", true),
+    new Language("python", true),
+    new Language("lateX", true),
+    new Language("sql", true),
+    new Language("php", false),
+    new Language("symphony", false),
+    new Language("wordpress", false),
+]
+
+
+languagesArray.forEach(language => {
+    let newLanguageBox = document.createElement("span");
+    if (language.appris) {
+        newLanguageBox.classList.add("language");
+    } else {
+        newLanguageBox.classList.add("languageNon");
+    }
+    newLanguageBox.textContent = language.nom;
+    document.querySelector("#skills").appendChild(newLanguageBox);
+});
+
+
+class Diploma {
+    constructor(nom,date,desc,img) {
+        this.nom = nom
+        this.date = date
+        this.desc = desc
+        this.img = img
+    }
+}
+
+let diplomasArray = [
+    new Diploma("bac","2019","Bac S Science Ingénieur Option ISN","img/bac.png"),
+    new Diploma("pmm","2019","Préparation Militaire Marine","img/marine.png"),
+    new Diploma("bnssa","2021","Brevet National de Sécurité et de Sauvetage Aquatique","img/bnssa.png")
+]
+
+diplomasArray.forEach(diploma => {
+    let newDiplomaBox = document.createElement("div");
+    let newSpanContainer = document.createElement("div");
+    let newDiplomaTitle = document.createElement("span");
+    let newDiplomaDate = document.createElement("span");
+    let newDiplomaDesc = document.createElement("p");
+
+    newDiplomaBox.classList.add("diplomaBox");
+    newSpanContainer.classList.add("flex");
+    newDiplomaTitle.classList.add("diplomaTitle");
+    newDiplomaDate.classList.add("diplomaDate");
+    newDiplomaDesc.classList.add("diplomaDesc");
+
+    newDiplomaTitle.textContent = diploma.nom
+    newDiplomaDate.textContent = diploma.date
+    newDiplomaDesc.textContent = diploma.desc
+    newDiplomaBox.style.backgroundImage = ` linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("${diploma.img}") `
+
+    newSpanContainer.append(newDiplomaTitle,newDiplomaDate);
+    newDiplomaBox.append(newSpanContainer,newDiplomaDesc);
+    document.querySelector("#diplomas").appendChild(newDiplomaBox);
+    
+});

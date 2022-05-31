@@ -3,13 +3,14 @@ footer{
     background-color: darkblue;
     padding: .5rem;
     font-size: .7rem;
-    box-shadow: 0px -3px 15px 7px rgba(0,0,0,0.18);
+    box-shadow: 0px -4px 3px 0px rgba(0,0,0,0.18);
     
     .flex{
         display: flex;
         flex-direction: column;
         align-items: center;
-        a{color: white;text-decoration: none;margin-bottom: .5rem;}
+        a{color: white;text-decoration: none;margin-bottom: .5rem;transition: color .3s;}
+        a:hover{color: blue;transition: color .3s;}
     }
     
 }
