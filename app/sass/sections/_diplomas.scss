@@ -41,3 +41,21 @@
         }
     }
 }
+
+@media screen and (min-width:480px) {
+    #diplomas{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .diplomaBox:first-child{
+            width: 60%;
+        }
+        .diplomaBox:nth-child(2){
+            width: 39%;
+        }
+        .diplomaBox:last-child{
+            width: 100%;
+        }
+    }
+}
