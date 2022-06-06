@@ -1,6 +1,5 @@
 
 
-
 let selectProjectArea = document.querySelector("#projectArea")
 
 class Project {
@@ -23,7 +22,6 @@ const jdc = new Project("Jeu du clique" , "https://jeuduclick.vercel.app/" , "/i
 let projectArray = [portfolioEmile,portfolioAlex,jdc]
 
 projectArray.forEach(project => {
-    let linkCard = document.createElement("a")
     let projectBox = document.createElement("div");
     let projectImg = document.createElement("div");
     let boxTitleContainer = document.createElement("div");
@@ -42,7 +40,10 @@ projectArray.forEach(project => {
 
     projectBox.classList.add("projectBox");
     projectImg.classList.add("projectImg");
-    projectImg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(${project.photo})`
+    projectImg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url(${project.photo})`;
+    projectImg.onclick = function(){
+        window.location = project.url
+    }
     boxTitleContainer.classList.add("boxTitleContainer");
     boxTitle.classList.add("boxTitle");
     boxLanguages.classList.add("boxLanguages");
@@ -50,16 +51,14 @@ projectArray.forEach(project => {
     
     boxDesc.textContent = project.desc;
     boxTitle.textContent = project.nom;
-    linkCard.href = project.url;
 
     boxTitleContainer.appendChild(boxTitle);
     projectImg.append(boxTitleContainer,boxDesc);
-    linkCard.appendChild(projectImg);
+    //linkCard.appendChild(projectImg);
     
-    projectBox.append(linkCard,boxLanguages);
+    projectBox.append(projectImg,boxLanguages);
 
     selectProjectArea.append(projectBox);
-
 
     let selectProjectCard = document.querySelectorAll(".projectImg");
     selectProjectCard.forEach(card => {
@@ -72,6 +71,7 @@ projectArray.forEach(project => {
             card.classList.remove("activeImgBox")
             this.children[0].children[0].style.backgroundColor="darkblue";
         });
+
     });
 });
 
