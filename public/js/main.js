@@ -92,7 +92,7 @@ let languagesArray = [
     new Language("lateX", true),
     new Language("sql", true),
     new Language("php", false),
-    new Language("symphony", false),
+    new Language("symfony", false),
     new Language("wordpress", false),
 ]
 
